@@ -1,0 +1,181 @@
+.purple {
+    background: indigo;
+}
+
+.gold {
+    background: gold;
+}
+
+.chocolate {
+    background: #4E3E2F;
+}
+
+.facebook {
+    color: cornflowerblue;
+}
+
+.facebook:hover {
+    background: cornflowerblue;
+    color: #FFFFFF;
+}
+
+.instagram {
+    color: #e1306c;
+}
+
+.instagram:hover {
+    color: #FFFFFF;
+    background: #e1306c;
+}
+
+.twitter {
+    color: #00acee;
+}
+
+.twitter:hover {
+    color: #FFFFFF;
+    background: #00acee;
+}
+
+.whatsapp {
+    color: #25d366;
+}
+
+.whatsapp:hover {
+    color: #FFFFFF;
+    background: #25d366;
+}
+
+.mail {
+    color: #BB8FCE;
+}
+
+.mail:hover {
+    color: #FFFFFF;
+    background: #BB8FCE;
+}
+
+.logo {
+    margin: 10px 10px;
+}
+
+.border-logo {
+    border: solid 2px #583F5A;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.innova {
+    font-family: 'Pacifico', cursive;
+    font-size: 3rem;
+    line-height: 1;
+    text-align: start;
+    letter-spacing: normal;
+}
+
+.links {
+    color: #FFFFFF;
+  
+}
+.links:hover {
+    text-decoration: none;
+    color: coral;
+}
+
+.fab {
+    background: #ff9966;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ff5e62, #ff9966);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ff5e62, #ff9966); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+   -webkit-text-fill-color:transparent;
+}
+
+.fab:hover {
+    transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    transition-delay: 0.1s;
+}
+
+.fa-heart {
+    color: #00E2A1;  
+}
+.fa-heart:hover {
+    color: #FFFFFF;
+}
+
+.copy-left {
+    display: inline-block;
+    text-align: right;
+    margin: 0px;
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+    }
+
+.no-link {
+    text-decoration: none !important;
+}
+
+.heart {
+    width: 5%;
+    fill: #4E3E2F;
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: block;
+    transition: top 0.3s;
+  }
+
+  .inne {
+    background: #ff9966;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ff5e62, #ff9966);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ff5e62, #ff9966); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+   -webkit-text-fill-color:transparent;
+   font-size: 7vmax;
+  }
+
+  .side-list {
+      text-align: center;
+  }
+
+  .side-list li {
+      margin-top: 2rem;
+      list-style: none;
+  }
+
+  .side-links {
+      text-align: center;
+  }
+
+  .side-links .fab {
+    background: #ad5389;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #3c1053, #ad5389);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #3c1053, #ad5389); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+   -webkit-text-fill-color:transparent; 
+  }
+
+  .fa-times-circle {
+    background: #333333;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #dd1818, #333333);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #dd1818, #333333); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+   -webkit-text-fill-color:transparent;
+    
+  }

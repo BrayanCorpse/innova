@@ -1,0 +1,156 @@
+.s-products {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: start;
+    align-items: flex-start;
+  }
+  
+  .w-product-card {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    color: #fff;
+    background: #573f57;
+    width: 400px;
+    height: 400px;
+    border-radius: 8px;
+    padding: 10px;
+    overflow: hidden;
+    position: relative;
+  }
+  .w-product-card:before {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #FF7F65;
+    -webkit-clip-path: ellipse(45% 30% at 100% 0%);
+            clip-path: ellipse(45% 30% at 100% 0%);
+    z-index: 1;
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+  }
+  .w-product-card:hover:before {
+    -webkit-clip-path: ellipse(120% 60% at 100% 0%);
+            clip-path: ellipse(120% 60% at 100% 0%);
+  }
+  .w-product-card__content {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    -webkit-box-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+            justify-content: center;
+    z-index: 2;
+  }
+  .w-product-card__image {
+    display: block;
+    width: 100%;
+    height: 150px;
+    margin-top: -40px;
+    margin-bottom: 30px;
+    -webkit-transform: scale(0.8) translatey(0);
+            transform: scale(0.8) translatey(0);
+    -webkit-transition: .2s ease-in-out;
+    transition: .2s ease-in-out;
+  }
+  .w-product-card:hover .w-product-card__image {
+    -webkit-transform: scale(1) translatey(-10%);
+            transform: scale(1) translatey(-10%);
+  }
+  .w-product-card h4 {
+    font-family: 'Baloo Paaji 2', cursive;
+    font-weight: 500;
+    color: #fff;
+  }
+  .w-product-card__button {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    background: #EC7063;
+    padding: 7px 15px;
+    text-align: center;
+    min-width: 120px;
+    border-radius: 3px;
+    font-family: 'Baloo Paaji 2', cursive;
+    font-weight: 500;
+    opacity: 0;
+    -webkit-transition: .2s ease-in-out;
+    transition: .2s ease-in-out;
+    -webkit-transform: translatey(-10px);
+            transform: translatey(-10px);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+  .w-product-card__button:hover {
+    box-shadow: 0 0 0 3px rgba(255, 95, 95, 0.2);
+    text-decoration: none;
+  }
+  .w-product-card:hover .w-product-card__button {
+    opacity: 1;
+    -webkit-transform: translatey(-25px);
+            transform: translatey(-25px);
+  }
+  
+  .price {
+    letter-spacing: 0.2rem;
+    text-align: center;
+  }
+
+  .fa-star, .fa-star-half-alt {
+    color: gold;
+  }
+
+ .descuento {
+    font-size: 25px;
+    color: #EC7063;
+  }
+
+  .uk-button-buy {
+    background: #EC7063;
+    color: #fff;
+    text-decoration: none !important;
+    padding: 7px 15px;
+    text-align: center;
+    min-width: 120px;
+    border-radius: 3px;
+    font-family: 'Baloo Paaji 2', cursive;
+    font-weight: 500;
+    -webkit-transition: .2s ease-in-out;
+    transition: .2s ease-in-out;
+    -webkit-transform: translatey(-10px);
+            transform: translatey(-10px);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+
+  .uk-button-buy:hover {
+    box-shadow: 0 0 0 3px rgba(255, 95, 95, 0.2);
+    color: #fff;
+  }
+
+  .category {
+    border: solid 1px  #fff;
+  }
+
+  .cat {
+    background: #f8f8f8;
+    fill: #666666;
+  }
+
+  .cat:hover {
+    background: cornflowerblue;
+    fill: #f8f8f8;
+    color: #f8f8f8 ;
+  }
+
+  .cat svg {
+    width: 50%;
+  }
