@@ -96,7 +96,7 @@
                     </li>
                 </ul>
 
-                <div class="side-links uk-margin-xlarge-top">
+                <div class="side-links uk-margin-large-top">
                     <a class="no-link" href="#">
                         <i class="fab fa-facebook-square fa-2x uk-margin-right"></i>
                     </a>
