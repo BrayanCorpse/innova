@@ -5,6 +5,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="Bulma is a free, open source CSS framework based on Flexbox and built with Sass. It's 100% responsive, fully modular, and available for free.">
+        <meta property="og:url" content="">
+        <meta property="og:type" content="website"> 
         <title>Innova Espacios</title> 
         <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"> 
         <link rel="stylesheet" href="css/uikit.css">
@@ -14,9 +16,7 @@
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-        />
-        <meta property="og:url" content="">
-        <meta property="og:type" content="website">    
+        />   
     </head>
 <body>
 
@@ -83,16 +83,19 @@
                         </form>
                     </li>  
                     <li>
-                        <a class="uk-text-bold" href="">Contacto</a>
+                        <a class="uk-text-bold side-links" href="">Contacto</a>
                     </li>
                     <li>
-                        <a class="uk-text-bold" href="">Sucursales</a>
+                        <a class="uk-text-bold side-links" href="">Sucursales</a>
                     </li>
                     <li>
-                        <a class="uk-text-bold" href="">¿Quiénes somos?</a>
+                        <a class="uk-text-bold side-links" href="">¿Quiénes somos?</a>
                     </li>
                     <li>
-                        <a class="uk-text-bold" href="">Tienda</a>
+                        <a class="uk-text-bold side-links" href="">
+                            <i class="fas fa-shopping-cart"></i>
+                            Tienda
+                        </a>
                     </li>
                 </ul>
 

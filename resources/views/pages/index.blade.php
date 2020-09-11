@@ -21,34 +21,15 @@
 <div class="uk-position-relative uk-visible-toggle uk-margin-large-top" tabindex="-1" uk-slideshow="autoplay: true">
 
     <ul class="uk-slideshow-items">
+        @foreach ($anuncios as $anu)
         <li>
-            <img src="img/sillon.jpg" alt="" uk-cover>
+            <img src={{$anu->url}} alt="" uk-cover>
             <div class="uk-position-bottom uk-position-medium uk-text-center uk-light">
-                <h3 class="uk-margin-remove">Overlay Bottom Right</h3>
-                <p class="uk-margin-remove">Lorem ipsum dolor sit amet.</p>
+            <h3 class="uk-margin-remove">{{$anu->name}}</h3>
+            <p class="uk-margin-remove">{{$anu->description}}</p>
             </div>
         </li>
-        <li>
-            <img src="img/sillon2.jpg" alt="" uk-cover>
-            <div class="uk-position-bottom uk-position-medium uk-text-center uk-light">
-                <h3 class="uk-margin-remove">Overlay Bottom Right</h3>
-                <p class="uk-margin-remove">Lorem ipsum dolor sit amet.</p>
-            </div>
-        </li>
-        <li>
-            <img src="img/sillon3.jpg" alt="" uk-cover>
-            <div class="uk-position-bottom uk-position-medium uk-text-center uk-light">
-                <h3 class="uk-margin-remove">Overlay Bottom Right</h3>
-                <p class="uk-margin-remove">Lorem ipsum dolor sit amet.</p>
-            </div>
-        </li>
-        <li>
-            <img src="img/sillon4.jpg" alt="" uk-cover>
-            <div class="uk-position-bottom uk-position-medium uk-text-center uk-light">
-                <h3 class="uk-margin-remove">Overlay Bottom Right</h3>
-                <p class="uk-margin-remove">Lorem ipsum dolor sit amet.</p>
-            </div>
-        </li>
+        @endforeach
     </ul>
 
     <div class="uk-light">
@@ -89,10 +70,10 @@
                 <div class="s-products">
                     <div class="w-product-card">
                       <div class="w-product-card__content">
-                        <div class="w-product-card__image">
-                            <img src="img/avangarb.jpg" alt=" "/>
+                        <div class="w-product-card__image box">
+                            <img src="img/crossback-natural.png" alt=" "/>
                         </div>
-                            <h4>Silla Avant garde</h4>
+                            <h4>Silla Crossback Natural</h4>
                             <p class="price uk-margin-remove-top">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -112,9 +93,9 @@
                     <div class="w-product-card">
                       <div class="w-product-card__content">
                         <div class="w-product-card__image">
-                            <img src="img/avangarb.jpg" alt=" "/>
+                            <img src="img/tiffany-dorada.png" alt=" "/>
                         </div>
-                            <h4>Silla Avant garde</h4>
+                            <h4>Silla Tiffany Dorada</h4>
                             <p class="price uk-margin-remove-top">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -134,9 +115,9 @@
                     <div class="w-product-card">
                       <div class="w-product-card__content">
                         <div class="w-product-card__image">
-                            <img src="img/avangarb.jpg" alt=" "/>
+                            <img src="img/silla-versalles.png" alt=" "/>
                         </div>
-                            <h4>Silla Avant garde</h4>
+                            <h4>Silla Versalles</h4>
                             <p class="price uk-margin-remove-top">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -156,9 +137,9 @@
                     <div class="w-product-card">
                       <div class="w-product-card__content">
                         <div class="w-product-card__image">
-                            <img src="img/avangarb.jpg" alt=" "/>
+                            <img src="img/silla-salvador.png" alt=" "/>
                         </div>
-                            <h3>Silla Avant garde</h3>
+                            <h3>Silla Salvador</h3>
                             <p class="price uk-margin-remove-top">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -481,7 +462,7 @@
             Pago directo en sucursal.
             <br>
             <br>
-            <i class="fa fa-shopping-bag fa-5x" aria-hidden="true"></i>
+            <img src="img/agency.svg" alt="" width="100">
         </p>
         
 
