@@ -120,4 +120,15 @@ align-items: center;
 justify-content: start;
 }
 
+.trash {
+    background:#fff;
+    color: orangered;
+    border: solid 1px orangered;
+    
+}
+
+.trash:hover {
+    background: orangered;
+    color: #fff;
+}
 

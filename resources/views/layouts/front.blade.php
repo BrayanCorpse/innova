@@ -9,14 +9,16 @@
         <meta property="og:type" content="website"> 
         <title>Innova Espacios</title> 
         <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"> 
-        <link rel="stylesheet" href="css/uikit.css">
+        <link rel="stylesheet" href="{{asset('css/uikit.css')}}">
+        <link rel="stylesheet" href="{{asset('css/cards.css')}}">
+        <link rel="stylesheet" href="{{asset('css/radio.css')}}">   
         <link 
         href="https://fonts.googleapis.com/css2?family=Pacifico&family=Permanent+Marker&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-        />   
+        />
     </head>
 <body>
 
@@ -35,7 +37,9 @@
                       <div class="uk-navbar-right">
                         <ul class="uk-navbar-nav uk-visible@m">
                             <div class="uk-margin-large-right">
-                                <img src="img/logo-header.png" alt="" width="90">
+                                <a href="{{url('inicio')}}">
+                                    <img src="img/logo-header.png" alt="" width="90">
+                                </a>
                             </div>
                             <div class="uk-navbar-item">
                                 <form>
@@ -46,7 +50,7 @@
                                 </form>
                             </div>
                             <li>
-                                <a class="uk-text-bold" href="">Contacto</a>
+                                <a class="uk-text-bold" href="{{url('contacto')}}">Contacto</a>
                             </li>
                             <li>
                                 <a class="uk-text-bold" href="">Sucursales</a>
@@ -125,7 +129,7 @@
     {{-- End Menu --}}
 
     <div class="uk-container uk-container-expand">
-      @yield('contend')
+      @yield('content')
     </div>
         
 
@@ -168,27 +172,17 @@
             </div>
             <div class="uk-text-center uk-margin-medium-top">
                 <h4 class="uk-h4 uk-text-capitalize" style="color: #fff">
-                    <span class="copy-left">©</span> Developed with <i aria-hidden="true" class="fa fa-heart"></i> by ByDsolutions.
+                    <span class="copy-left">©</span> Developed with <i aria-hidden="true" class="fa fa-heart"></i> ByDsolutions.
                 </h4>
             </div>
             
         </div>
-
-    
-       
-           
-        
-
-        
+     
     </div>
-        @yield('footer')
+    <script src="{{asset('js/uikit.min.js')}}"></script>
+    <script src="{{asset('js/uikit-icons.min.js')}}"></script>
+    @yield('footer')
 
     {{--End Footer  --}}
-
-
-
-
-    <script src="js/uikit.min.js"></script>
-    <script src="js/uikit-icons.min.js"></script>
 </body>
 </html>

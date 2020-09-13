@@ -6,15 +6,24 @@ use Illuminate\Http\Request;
 
 use App\Anuncios;
 
+use App\Tipos;
+
+use Illuminate\Support\Facades\Storage;
+
 
 class AnunciosController extends Controller
 {
     public function index(){
-        $anuncios = Anuncios::simplePaginate(3);
-    	return view('pages.publicidad', compact('anuncios'));
+        $anuncios = Anuncios::orderBy('ida', 'desc')->simplePaginate(3);
+    	return view('pages.anuncios', compact('anuncios'));
     }
 
     public function store(Request $request){
+
+        $request->validate([
+            'name' => 'required',
+            "url" => "required|image|mimes:jpeg,jpg,png,webp,svg|max:5000",
+          ]);
 
         $image=new Anuncios($request->all());   
 
@@ -23,21 +32,25 @@ class AnunciosController extends Controller
             $file = $request->file("url");
             //$nombrearchivo  = str_slug($request->slug).".".$file->getClientOriginalExtension();
             $nombrearchivo  = $file->getClientOriginalName();
-            $file->move(public_path("storage"),$nombrearchivo);
-            $image->url = 'storage/'.$nombrearchivo;
+            $file->move(public_path("storage/anuncios"),$nombrearchivo);
+            $image->url = 'storage/anuncios/'.$nombrearchivo;
 
         }
 
         $image->save();
 
-        return redirect()->route('publicidad')
-        ->with("<script>
-                    UIkit.notification({
-                        message: 'Success !',
-                        status: 'Success ',
-                        pos: 'bottom-right',
-                        timeout: 10000
-                    });
-                </script>");
+        return redirect()->route('anuncios')->with('message', 'Registro Creado!');
+    }
+
+    public function delete(Request $request){
+
+       $photo = Anuncios::find($request->ida);
+       $photo->delete();
+     //$photoPath = str_replace('storage', 'public', $photo->url);
+       $photoPath = str_replace('storage/anuncios', 'public/anuncios', $photo->url);
+       Storage::delete($photoPath);
+       
+       return redirect()->route('anuncios')->with('messageDelete', 'Registro Eliminado!');
+
     }
 }

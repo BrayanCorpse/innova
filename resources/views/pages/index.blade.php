@@ -1,12 +1,7 @@
 @extends('layouts.front')
 @section('menu')
 @endsection
-
-@section('contend')
-
-<link rel="stylesheet" href="css/cards.css">
-<link rel="stylesheet" href="css/radio.css">
-
+@section('content')
 <div class="uk-height-large uk-background-cover uk-overflow-hidden uk-light uk-flex uk-flex-top uk-margin-large-top" style="background-image: url('img/furniture.jpg');">
     <div class="uk-width-1-2@m uk-text-center uk-margin-auto uk-margin-auto-vertical">
         <h1 class="animate__animated animate__backInDown uk-h1">Innova Espacios</h1>
@@ -23,7 +18,7 @@
     <ul class="uk-slideshow-items">
         @foreach ($anuncios as $anu)
         <li>
-            <img src={{$anu->url}} alt="" uk-cover>
+            <img src="{{$anu->url}}" alt="{{$anu->name}}" uk-cover>
             <div class="uk-position-bottom uk-position-medium uk-text-center uk-light">
             <h3 class="uk-margin-remove">{{$anu->name}}</h3>
             <p class="uk-margin-remove">{{$anu->description}}</p>
@@ -386,23 +381,6 @@
     </div>
 </div>
 
-<div class="uk-position-relative uk-visible-toggle uk-light uk-margin-large-top" tabindex="-1" uk-slideshow="ratio: 16:3; animation: scale; autoplay: true">
-
-    <ul class="uk-slideshow-items">
-        <li>
-            <img src="img/banner.jpg" alt="" uk-cover>
-        </li>
-        <li>
-            <img src="img/banner2.jpg" alt="" uk-cover>
-        </li>
-
-    </ul>
-
-    <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
-    <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
-
-</div>
-
 <div id="msi" class="uk-flex-top" uk-modal>
     <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
 
@@ -467,6 +445,21 @@
         
 
     </div>
+</div>
+
+<div class="uk-position-relative uk-visible-toggle uk-light uk-margin-large-top" tabindex="-1" uk-slideshow="ratio: 16:3; animation: scale; autoplay: true">
+
+    <ul class="uk-slideshow-items">
+        @foreach ($banners as $bann)
+        <li>
+            <img src="{{$bann->url}}" alt="{{$bann->name}}" uk-cover>
+        </li> 
+        @endforeach
+    </ul>
+
+    <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+    <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+
 </div>
 
 <div class="uk-margin-large-top">

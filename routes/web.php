@@ -13,13 +13,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('pages.index');
-// });
+Route::get('/', function () {
+    return view('welcome');
+});
 
-Route::get('/','IndexController@index');
+Auth::routes();
 
-Route::get('/publicidad','AnunciosController@index')->name('publicidad');
-Route::post('/publicidad/store','AnunciosController@store')->name('GuardarAnuncio');
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/inicio','IndexController@index');
+Route::get('/contacto','IndexController@contacto')->name('contacto');
+
+Route::get('/dashboard','IndexController@dashboard')->name('dashboard');
+
+Route::get('/anuncios','AnunciosController@index')->name('anuncios');
+Route::post('/anuncios/store','AnunciosController@store')->name('GuardarAnuncio');
+
+Route::post('/deleteAnuncio','AnunciosController@delete')->name('deleteAnuncio');
+
 
 

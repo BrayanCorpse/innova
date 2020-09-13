@@ -8,10 +8,13 @@
         <meta property="og:url" content="">
         <meta property="og:type" content="website"> 
         <title>Innova Espacios</title> 
-        <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"> 
-        <link rel="stylesheet" href="css/uikit.css">
-        <link rel="stylesheet" href="css/sidebar.css">
+        <link rel="shortcut icon" href="{{asset('../favicon.ico')}}" type="image/x-icon"> 
+        <link rel="stylesheet" href="{{asset('css/uikit.css')}}">
+        <link rel="stylesheet" href="{{asset('css/sidebar.css')}}">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" />
+        <!-- Load More Javascript -->
+        <script src="{{asset('js/uikit.min.js')}}" ></script>
+        <script src="{{asset('js/uikit-icons.min.js')}}"></script>     		
     </head>
     <body>
         <div uk-sticky class="uk-navbar-container">
@@ -46,9 +49,21 @@
             <ul>
                 <li>
                     <a href="#">
-                        <i class="fa fa-tachometer fa-2x" aria-hidden="true"></i>
+                        <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
+                        <span class="nav-text">Menu</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{url('anuncios')}}">
+                        <i class="fa fa-picture-o fa-2x" aria-hidden="true"></i>
+                        <span class="nav-text">Anuncios</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-folder-open fa-2x"></i>
                         <span class="nav-text">
-                            Dashboard
+                            Productos
                         </span>
                     </a>
                 </li>
@@ -60,69 +75,13 @@
                         </span>
                     </a>
                 </li>
-                <li>
-                    <a href="#">
-                        <i class="fa fa-list fa-2x"></i>
-                        <span class="nav-text">
-                            Forms
-                        </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fa fa-folder-open fa-2x"></i>
-                        <span class="nav-text">
-                            Pages
-                        </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fa fa-bar-chart-o fa-2x"></i>
-                        <span class="nav-text">
-                            Graphs and Statistics
-                        </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fa fa-font fa-2x"></i>
-                        <span class="nav-text">
-                            Quotes
-                        </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fa fa-table fa-2x"></i>
-                        <span class="nav-text">
-                            Tables
-                        </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fa fa-map-marker fa-2x"></i>
-                        <span class="nav-text">
-                            Maps
-                        </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fa fa-info fa-2x"></i>
-                        <span class="nav-text">
-                            Documentation
-                        </span>
-                    </a>
-                </li>
             </ul>
             <ul class="logout">
             <li>
-                <a href="#">
+                <a href="{{url('/')}}">
                     <i class="fa fa-power-off fa-2x"></i>
                     <span class="nav-text">
-                        Logout
+                        Salir
                     </span>
                 </a>
             </li>
@@ -139,10 +98,10 @@
                     <p>Welcome back, <span class="uk-label uk-label-success">Brayan Manzano</span></p>
                     <ul class="uk-breadcrumb">
                         <li>
-                            <a href="#">Home</a>
+                        <a href="{{route('dashboard')}}">Home</a>
                         </li>
                         <li>
-                            <a href="#">Dashboard</a>
+                            <a href="{{Route::current()->getName() }}">{{Route::current()->getName() }}</a>
                         </li>
                     </ul>
                 </div>
@@ -152,17 +111,10 @@
         @yield('menu')
  
         <div class="uk-section-small uk-margin-large-left">
-            <div class="uk-container uk-container-medium">
-                <div uk-grid class="uk-child-width-1-1@s uk-child-width-1-2@m uk-child-width-1-4@xl">
-                    @yield('contend')
-                </div>
+            <div class="uk-container uk-container-medium">     
+                    @yield('content')
             </div>
         </div>
 
-        
-            
-		<!-- Load More Javascript -->
-        <script src="js/uikit.min.js" ></script>
-        <script src="js/uikit-icons.min.js" ></script>
     </body>
 </html>
